@@ -60,7 +60,3 @@ class RecentlyMovies(ListView):
     def get_queryset(self):
         return Movie.objects.all().order_by('-id')[:9]
 
-
-def search(request):
-    print(request.GET['Search'])
-    return render(request, "movie/movie_list.html")
