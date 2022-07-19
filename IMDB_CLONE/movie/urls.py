@@ -10,4 +10,5 @@ urlpatterns = [
     path('drama/',views.DramaGenre.as_view(), name="DramaGenre"),
     path('<pk>/',views.MovieDetail.as_view(),name="MovieDetail"),
     path('new/recent/',views.RecentlyMovies.as_view(),name="RecentMovie"),
+    path('search/',views.Search,name="Search"),
 ]

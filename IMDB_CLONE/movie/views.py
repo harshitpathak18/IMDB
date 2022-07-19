@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.shortcuts import redirect, render, HttpResponseRedirect
+from django.views.generic import ListView, DetailView, TemplateView
+
 
 from .models import Movie
 # Home Page
@@ -10,6 +11,11 @@ class MovieList(ListView):
 
     def get_queryset(self):
         return Movie.objects.all().order_by('?')
+    
+    def post(self, request, *args, **kwargs):
+        search = request.POST.get('search')
+        query = self.get_queryset().filter(title__icontains=search)
+        return Search(request,movie=query)
 
 # Action Movies
 class ActionGenre(ListView):
@@ -60,3 +66,8 @@ class RecentlyMovies(ListView):
     def get_queryset(self):
         return Movie.objects.all().order_by('-id')[:9]
 
+def Search(request,movie):
+    return render(request,'movie/movie_list.html',{'movies':movie})
+
+
+        

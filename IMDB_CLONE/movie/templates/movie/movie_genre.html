@@ -18,23 +18,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <a class="navbar-brand text-white" href="{%url 'MovieList'%}"><b><h2>IMDB</h2></b></a>
             
-            <ul class="navbar-nav mt-2 mt-lg-0" style="margin-left: 580px;">
-                <li class="nav-item active border ml-lg-4 " style="border-radius: 5px;">
-                    <a class="nav-link text-white" href="{%url 'ActionGenre'%}">Action </a>
-                </li>
-                <li class="nav-item  border ml-4" style="border-radius: 5px;">
-                    <a class="nav-link text-white" href="{%url 'DramaGenre'%}">Drama</a>
-                </li>
-                <li class="nav-item  border ml-4" style="border-radius: 5px;">
-                    <a class="nav-link text-white" href="{%url 'ScifiGenre'%}">Sci-fi</a>
-                </li>
-                <li class="nav-item  border ml-4" style="border-radius: 5px;">
-                    <a class="nav-link text-white" href="{%url 'ComedyGenre'%}">Comedy</a>
-                </li>
-                <li class="nav-item  border ml-4" style="border-radius: 5px;">
-                    <a class="nav-link text-white" href="{%url 'RecentMovie'%}">Recently Added</a>
-                </li>
-            
+            <ul class="navbar-nav mt-2 mt-lg-0" style="margin-left: 500px;">
+                <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'MovieList'%}" style="margin-left: 33px;">Home</a>
+                <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'ActionGenre'%}">Action </a>
+                <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'DramaGenre'%}">Drama</a>
+                <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'ScifiGenre'%}">Sci-fi</a>
+                <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'ComedyGenre'%}">Comedy</a>
+                <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'RecentMovie'%}">Recently Added</a>
             </ul>
             
             <!-- <form class="form-inline my-2 my-lg-0" method="POST">
@@ -47,10 +37,9 @@
     </nav>
 
 
-
         <div class="row">
             {%for movie in movies%}
-                <div class="card ml-3 m-1 w-25 m-5">
+                <div class="card w-25 m-5 mt-1">
                     
                     <a href="{%url 'MovieDetail' movie.id%}">
                         <img class="card-img-top img-fluid" src="{{movie.image.url}}" alt="Card image cap" style="height:70vh;">
