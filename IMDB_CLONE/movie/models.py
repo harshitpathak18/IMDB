@@ -7,6 +7,7 @@ GENRE_CHOICES={
     ('S',"SCI-FI"),
     ('D',"DRAMA"),
     ('C',"COMEDY"),
+    ('a',"ADVENTURE"),
 }
 
 class Movie(models.Model):

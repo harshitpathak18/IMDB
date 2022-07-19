@@ -8,6 +8,7 @@ urlpatterns = [
     path('comedy/',views.ComedyGenre.as_view(),name="ComedyGenre"),
     path('scifi/',views.ScifiGenre.as_view(),name="ScifiGenre"),
     path('drama/',views.DramaGenre.as_view(), name="DramaGenre"),
+    path('adventure/',views.AdventureGenre.as_view(), name="AdventureGenre"),
     path('<pk>/',views.MovieDetail.as_view(),name="MovieDetail"),
     path('new/recent/',views.RecentlyMovies.as_view(),name="RecentMovie"),
     path('search/',views.Search,name="Search"),

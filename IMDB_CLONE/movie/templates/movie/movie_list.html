@@ -17,17 +17,18 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <a class="navbar-brand text-white" href="{%url 'MovieList'%}"><b><h2>IMDB</h2></b></a>
             
-            <form class="form-inline my-2 my-lg-0" method="POST" style="margin-left: 252px;">
+            <form class="form-inline my-2 my-lg-0" method="POST" style="margin-left: 160px;">
                 {%csrf_token%}
                 <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
             </form>
 
 
-            <ul class="navbar-nav mt-2 mt-lg-0 mr-auto" style="margin-left: 40px;">
+            <ul class="navbar-nav mt-2 mt-lg-0" style="margin-left: 20px;">
                 <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'ActionGenre'%}">Action </a>
-                <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'DramaGenre'%}">Drama</a>
+                <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'AdventureGenre'%}">Adventure</a>
                 <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'ScifiGenre'%}">Sci-fi</a>
+                <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'DramaGenre'%}">Drama</a>
                 <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'ComedyGenre'%}">Comedy</a>
                 <a class="text-white btn btn-outline-info h-25 m-2" href="{%url 'RecentMovie'%}">Recently Added</a>
             </ul>
